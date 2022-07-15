@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --lightGreen: #9ea331;
+    --darkGreen: #12812d;
+    --gray: #12554a;
+    --white: #e3deed;
+    --lightBlue: #c6d9ed;
+    --black: #1b0907;
+}
+/* Paleta1 */
+.color1 {color: #c6d9ed;}
+.color2 {color: #e3deed;}
+.color3 {color: #12554a;}
+.color4 {color: #12812d;}
+.color5 {color: #9ea331;}
+.color6 {color: #1b0907;}

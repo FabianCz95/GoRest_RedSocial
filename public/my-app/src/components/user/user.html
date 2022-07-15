@@ -1,0 +1,51 @@
+<main class="container py-3">
+  <div class="row">
+    <h1 class="titulo">
+      Mi cuenta
+    </h1>
+  </div>
+
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" href="#">Mis Datos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Mi actividad</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+        <div class="info">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="bi bi-person"></i>
+                <span [hidden]="Editing['name']">Nombre: {{ userData.name }}</span>
+                <input type="text" [hidden]="!Editing['name']" [value]="userData.name" (input)="UpdateValue($event, 'name');">
+                <i class="bi bi-pencil" [hidden]="Editing['name']" (click)="Editing['name'] = true"></i>
+                <i (click)="UpdateInfo('name');" class="bi bi-check2" [hidden]="!Editing['name']" (click)="Editing['name'] = false"></i>
+              </li>
+              <li class="list-group-item"><i class="bi bi-person"></i> 
+                <span [hidden]="Editing['email']">Email: {{ userData.email}}</span>
+                <input type="text" [hidden]="!Editing['email']" [value]="userData.email" (input)="UpdateValue($event, 'email');">
+                <i class="bi bi-pencil" [hidden]="Editing['email']" (click)="Editing['email'] = true"></i>
+                <i (click)="UpdateInfo('email');" class="bi bi-check2" [hidden]="!Editing['email']" (click)="Editing['email'] = false"></i>
+              </li>
+              <li class="list-group-item"><i class="bi bi-person"></i>
+                <span [hidden]="Editing['gender']">Genero: {{ userData.gender}}</span>
+                <input type="text" [hidden]="!Editing['gender']" [value]="userData.gender" (input)="UpdateValue($event, 'gender');">
+                <i class="bi bi-pencil" [hidden]="Editing['gender']" (click)="Editing['gender'] = true"></i>
+                <i (click)="UpdateInfo('gender');" class="bi bi-check2" [hidden]="!Editing['gender']" (click)="Editing['gender'] = false"></i>
+              </li>
+              <li class="list-group-item"><i class="bi bi-envelope"></i>
+                <span [hidden]="Editing['status']">Status: {{ userData.status}}</span>
+                <input type="text" [hidden]="!Editing['status']" [value]="userData.status" (input)="UpdateValue($event, 'status');">
+                <i class="bi bi-pencil" [hidden]="Editing['status']" (click)="Editing['status'] = true"></i>
+                <i (click)="UpdateInfo('status');" class="bi bi-check2" [hidden]="!Editing['status']" (click)="Editing['status'] = false"></i>
+              </li>
+            </ul>
+        </div>
+      </div>
+  </div>
+</main>
